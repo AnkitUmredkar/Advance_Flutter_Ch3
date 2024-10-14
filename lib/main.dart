@@ -1,4 +1,6 @@
-import 'package:advance_flutter_ch3/view/home_page.dart';
+
+import 'package:advance_flutter_ch3/in_app_webView/view/splash_screen.dart';
+import 'package:advance_flutter_ch3/in_app_webView/view/web_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: SplashScreen(),
     );
   }
 }
