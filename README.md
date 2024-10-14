@@ -26,3 +26,37 @@
 </div>
 
 <h1 align="left"> </h1>
+
+<h1 align="center"> 🔶 In-App WebView in Flutter 🔶 </h1>
+
+- The In-App WebView package in Flutter allows developers to display web content directly within the app. It provides a fully functional web browser with support for features like navigation, JavaScript, and HTML5, offering a seamless way to load web pages without leaving the app.
+
+<h1 align="left"> </h1>
+
+<div align="center">
+  <img height="550" align="left" src="https://github.com/user-attachments/assets/cb71d522-625e-485d-bbab-5c1efed7701e"/>
+  <img height="550" src="https://github.com/user-attachments/assets/16634e40-cb11-407a-93a2-d12d0d11b139"/>
+  <img height="550"  align="right" src="https://github.com/user-attachments/assets/eb7e23d4-8fff-4b9d-afc1-dc8d4d42803e"/>
+</div>
+
+<h1 align="left"> </h1>
+
+<div align="center">
+<video src="https://github.com/user-attachments/assets/62d8d730-d577-4caf-a988-4ad437aea075"/>
+</div>
+
+<h1 align="left"> </h1>
+
+<h1 align="center"> 🔶 Custom Search Engine 🔶 </h1>
+
+<div align="center">
+  <img height="550" src="https://github.com/user-attachments/assets/d93a97aa-e8a7-4096-8934-9156b9e92e9f"/>
+</div>
+
+<h1 align="left"> </h1>
+
+<div align="center">
+<video src="https://github.com/user-attachments/assets/6710b59f-377f-46de-ad05-5af678b746cd"/>
+</div>
+
+<h1 align="left"> </h1>
