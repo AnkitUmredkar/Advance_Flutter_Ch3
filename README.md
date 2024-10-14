@@ -49,6 +49,8 @@
 
 <h1 align="center"> 🔶 Custom Search Engine 🔶 </h1>
 
+- A powerful and lightweight search engine app built with Flutter. It allows users to search and retrieve results efficiently with a smooth and responsive UI. Designed with simplicity in mind, the app offers features like search suggestions, real-time filtering, and intuitive navigation. Ideal for learning or demonstrating Flutter’s capabilities in building fast and interactive search experiences across platforms.
+
 <div align="center">
   <img height="550" src="https://github.com/user-attachments/assets/d93a97aa-e8a7-4096-8934-9156b9e92e9f"/>
 </div>
