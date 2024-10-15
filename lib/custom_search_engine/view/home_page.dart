@@ -1,18 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:provider/provider.dart';
 
-import '../provider/search_engine_provider.dart';
-
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+class CustomSearchEngine extends StatefulWidget {
+  const CustomSearchEngine({super.key});
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<CustomSearchEngine> createState() => _HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _HomePageState extends State<CustomSearchEngine> {
   InAppWebViewController? _webViewController;
 
   @override

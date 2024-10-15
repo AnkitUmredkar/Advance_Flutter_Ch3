@@ -1,6 +1,4 @@
-
 import 'package:advance_flutter_ch3/in_app_webView/view/splash_screen.dart';
-import 'package:advance_flutter_ch3/in_app_webView/view/web_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {

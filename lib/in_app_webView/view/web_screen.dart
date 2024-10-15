@@ -1,62 +1,16 @@
+import 'package:advance_flutter_ch3/in_app_webView/model/ecommerce_model.dart';
 import 'package:advance_flutter_ch3/in_app_webView/view/web_view.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-class WebScreen extends StatelessWidget {
-  WebScreen({super.key});
+import '../utils/global.dart';
 
-  final List<Map<String, String>> eCommercePlatforms = [
-    {
-      "title": "Flip Kart",
-      "url": "https://www.flipkart.com",
-      "img":
-          "https://yt3.googleusercontent.com/cT40lDWqE99Ch52R3ftuAExjmjF-yZiY5rUSv_0Q3NXhcqzmiax8ReXuS4Qe53Fizcaw4hEX=s900-c-k-c0x00ffffff-no-rj"
-    },
-    {
-      "title": "Amazon",
-      "url": "https://www.amazon.in",
-      "img": "https://m.media-amazon.com/images/I/51HCHFclmmL.jpg"
-    },
-    {
-      "title": "Myntra",
-      "url": "https://www.myntra.com",
-      "img":
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4dJnTniYbwmtGJ3cyPX-AaLOPGtXWDkvdJA&s"
-    },
-    {
-      "title": "Meesho",
-      "url": "https://www.meesho.com",
-      "img":
-          "https://upload.wikimedia.org/wikipedia/commons/3/33/Meesho_logo.png"
-    },
-    {
-      "title": "eBay",
-      "url": "https://www.ebay.com/",
-      "img":
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEcambUGx7gfJtgNaeppxqpX-VgkL88h2h0w&s"
-    },
-    {
-      "title": "Shopsy",
-      "url": "https://www.shopsy.in/",
-      "img":
-          "https://5.imimg.com/data5/ANDROID/Default/2022/7/OV/BZ/OY/88779524/product-jpeg-500x500.jpg"
-    },
-    {
-      "title": "snapdeal",
-      "url": "https://snapdeal.com/",
-      "img":
-          "https://play-lh.googleusercontent.com/2oG3lRN6SomHM0MoGLWkmZje3_61ijVrTnJcmchr1h46QQwYPycmnhUOoPi9G8ytWY4"
-    },
-    {
-      "title": "indiaMART",
-      "url": "https://www.indiamart.com/",
-      "img":
-          "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxzdoX5TedBiCNqCr1UKQCxjWTb0gCEaozbA&s"
-    },
-  ];
+class WebScreen extends StatelessWidget {
+  const WebScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    List<EComModel> platform = eCommercePlatforms.map((e) => EComModel.fromMap(e)).toList();
     return Scaffold(
       backgroundColor: Colors.blue.shade50,
       appBar: AppBar(
@@ -67,7 +21,7 @@ class WebScreen extends StatelessWidget {
         ),
         actions: [
           IconButton(
-              onPressed: () {}, icon: Icon(Icons.search, color: Colors.white))
+              onPressed: () {}, icon: const Icon(Icons.search, color: Colors.white))
         ],
         backgroundColor: Colors.blue.shade900,
         title: const Text(
@@ -86,9 +40,9 @@ class WebScreen extends StatelessWidget {
         ),
         itemBuilder: (context, index) => buildGridTile(
           context,
-          eCommercePlatforms[index]['url']!,
-          eCommercePlatforms[index]['title']!,
-          eCommercePlatforms[index]['img']!,
+          platform[index].url,
+          platform[index].title,
+          platform[index].img,
         ),
       ),
     );
@@ -121,6 +75,19 @@ class WebScreen extends StatelessWidget {
                 img,
                 height: 80,
                 fit: BoxFit.cover,
+                loadingBuilder: (context, child, loadingProgress) {
+                  if (loadingProgress == null) return child;
+                  return Center(
+                    child: CircularProgressIndicator(
+                      color: Colors.blue.shade800,
+                    ),
+                  );
+                },
+                errorBuilder: (context, error, stackTrace) =>
+                const Text(
+                  'Image Failed to load!',
+                  style: TextStyle(color: Colors.red),
+                ),
               ),
               const Gap(10),
               Text(
